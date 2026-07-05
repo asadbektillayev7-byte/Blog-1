@@ -1,65 +1,129 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import BlinkingSlot from "@/app/components/BlinkingSlot";
+import SectionLabel from "@/app/components/SectionLabel";
+import SignatureDivider from "@/app/components/SignatureDivider";
+import FadeIn from "@/app/components/FadeIn";
+import LogList from "@/app/components/LogList";
+import LinkCard from "@/app/components/LinkCard";
+
+export const metadata: Metadata = {
+  title: "Asadbek Tillayev",
+  description:
+    "Learning, building, and living between Karshi and Tashkent.",
+};
 
 export default function Home() {
+  const nowItems = [
+    {
+      status: "building",
+      name: "IELTS mock exam platform",
+      description:
+        "Admin panel, question editor, timed reading exams — built without a formal coding background.",
+      link: "https://exam-platform-tan-mu.vercel.app",
+    },
+    {
+      status: "running",
+      name: "Asliddin Edu",
+      description:
+        "Education centre in Qarshi — English, IELTS, and CEFR prep.",
+    },
+    {
+      status: "active",
+      name: "MUHANDISS.UZ",
+      description:
+        "A community for young engineers, built and maintained alongside the people in it.",
+      link: "https://muhandiss.uz",
+    },
+    {
+      status: "next",
+      name: <BlinkingSlot />,
+    },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="max-w-3xl mx-auto px-6">
+      <FadeIn>
+        <section className="py-28">
+          <p className="font-display text-2xl leading-relaxed text-ink">
+            Hey, Asadbek here.
+            <br />
+            Learning, building, and living between Karshi and Tashkent.
+            <br />
+            I&apos;ve been in &ldquo;try-everything&rdquo; mode for the
+            last 1.5 years. I fill my free time reflecting on
+            thought-provoking ideas.
+            <br />
+            I love building (sometimes unfinished) side-projects with
+            vibe-coding.
+            <br />
+            <span className="font-display text-xs tracking-[0.3em] text-muted">
+              [_______]
+            </span>{" "}
+            more on the way.
           </p>
+        </section>
+      </FadeIn>
+
+      <SignatureDivider />
+
+      <section className="pb-28">
+        <SectionLabel index="01" title="now" />
+        <LogList items={nowItems} />
+      </section>
+
+      <SignatureDivider />
+
+      <section className="pb-28">
+        <SectionLabel index="02" title="writing" />
+        <div className="grid gap-4 sm:grid-cols-2">
+          <LinkCard
+            label="general blog"
+            handle="@asadbektillayevv"
+            href="https://t.me/asadbektillayevv"
+            description="Thoughts, updates, and things I'm exploring."
+            delay={0}
+          />
+          <LinkCard
+            label="process / reflective"
+            handle="@dyucke"
+            href="https://t.me/dyucke"
+            description="Things I couldn't walk past without going to its edge."
+            delay={0.08}
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      <SignatureDivider />
+
+      <section className="pb-28">
+        <SectionLabel index="03" title="elsewhere" />
+        <div className="flex flex-wrap gap-6 font-display text-sm uppercase tracking-wider">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://linkedin.com/in/asadbek-tillayev-7540ab329"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-ink hover:text-accent transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            LinkedIn
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/asadbektillayev7-byte"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-ink hover:text-accent transition-colors"
           >
-            Documentation
+            GitHub
+          </a>
+          <a
+            href="https://t.me/asadbektillayevv"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-ink hover:text-accent transition-colors"
+          >
+            Telegram
           </a>
         </div>
-      </main>
+      </section>
     </div>
   );
 }
