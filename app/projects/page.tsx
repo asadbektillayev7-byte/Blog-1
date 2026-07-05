@@ -15,7 +15,7 @@ const projects = [
     description:
       "A full-featured IELTS mock exam platform with an admin panel for managing questions, a question editor for creating reading passages and multiple question types, and timed reading exams that simulate the real test experience. Designed for students preparing for the IELTS academic module.",
     stack:
-      "Next.js, TypeScript, Tailwind CSS, PostgreSQL — scaffolded entirely via AI-assisted vibe-coding without a formal programming background.",
+      "Next.js, TypeScript, Tailwind CSS, Supabase — scaffolded entirely via AI-assisted vibe-coding without a formal programming background.",
     challenge:
       "Building an exam engine that accurately tracks time per section, handles passage-based reading comprehension with multiple question formats (multiple choice, matching headings, True/False/Not Given), and provides immediate scoring feedback — all while learning to code on the fly.",
     link: "https://exam-platform-tan-mu.vercel.app",

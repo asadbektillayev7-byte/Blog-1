@@ -20,7 +20,7 @@ const timelineItems = [
     status: "2025",
     name: "Founded Asliddin Edu",
     description:
-      "Started an education centre in Qarshi offering English, IELTS, and CEFR preparation courses. Runs alongside family — the centre bears his father's name.",
+      "Started an education centre in Qarshi offering English, IELTS, and CEFR preparation courses.",
   },
   {
     status: "2024–25",
